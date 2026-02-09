@@ -1,0 +1,20 @@
+Explain .hide() and .show() methods.
+    1. hide() method
+    --> The .hide() method hides selected elements by setting their CSS display property to none.
+
+    Syntax :- 
+        $(selector).hide();
+
+    With speed and callback
+        $(selector).hide(speed, callback);
+
+    2. .show() method
+    --> The .show() method displays hidden elements by restoring their original display value.
+
+        With speed and callback
+            $(selector).show(speed, callback);
+
+    Key Points :-
+        Both methods can accept:
+            Speed: "slow", "fast", or milliseconds
+            Callback function (runs after animation)

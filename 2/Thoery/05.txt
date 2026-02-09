@@ -1,0 +1,16 @@
+Explain animation chaining in jQuery.
+
+    --> Animation Chaining in jQuery
+    --> Animation chaining in jQuery means running multiple effects or animations one after another on the same element using a single statement.
+    --> jQuery makes this possible because most jQuery methods return the same jQuery object, allowing methods to be chained.
+
+    Why animation chaining is used
+        --> Cleaner and shorter code 
+        --> Ensures animations run in sequence, not all at once
+        --> Improves readability
+        --> No need for callback hell
+
+    How it works
+        --> jQuery uses an internal animation queue
+        --> Each effect waits until the previous one completes  
+        --> Animations execute step by step

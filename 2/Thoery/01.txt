@@ -1,0 +1,33 @@
+What are jQuery effects?
+    --> jQuery effects are built-in animation and visual methods provided by jQuery that make it easy to add smooth UI interactions to a webpage—without writing complex JavaScript or CSS animations.
+    --> In simple words jQuery effects help you show, hide, move, or animate HTML elements with smooth transitions.
+
+    --> Why jQuery Effects are used
+        --> Improve user experience
+        --> Make web pages feel interactive
+        --> Save time (less code, more effect )
+        --> Easy to apply with just one line of code
+
+     Common jQuery Effects
+        1. Show & Hide Effects
+        --> Used to display or hide elements.
+
+        2. Fade Effects
+        --> Change opacity smoothly.
+
+    3. Slide Effects
+    --> Slide elements up or down.
+
+    4. Animation Effect
+    --> Create custom animations.
+
+    5. Delay & Stop
+    --> Control animation timing.
+
+    Features of jQuery Effects
+
+    Smooth animations
+    Cross-browser compatible
+    Customizable speed (slow, fast, milliseconds)
+    Callback functions supported
+

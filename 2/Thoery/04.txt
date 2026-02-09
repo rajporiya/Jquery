@@ -1,0 +1,23 @@
+What is .slideToggle()?
+
+    --> The .slideToggle() method in jQuery is an animation effect that toggles between .slideUp() and .slideDown().
+
+    Syntax:- 
+        $(selector).slideToggle();
+
+    How it works
+        --> If the element is visible → .slideToggle() will slide it up (hide)
+        --> If the element is hidden → .slideToggle() will slide it down (show)
+
+    Key Features
+            Uses vertical sliding motion
+
+            Adjusts element height
+
+            Smooth animation
+
+            Accepts:
+
+            "fast", "slow", or milliseconds
+
+            Callback function

@@ -1,0 +1,29 @@
+Explain .fadeIn() and .fadeOut() methods.
+    --> The .fadeIn() and .fadeOut() methods are jQuery effects used to show or hide elements with a smooth fading (opacity) animation.
+
+    1. .fadeIn() method:-
+        --> The .fadeIn() method gradually makes a hidden element visible by increasing its opacity from 0 to 1.
+
+        Sysntax:-
+            $(selector).fadeIn();
+
+    2. .fadeOut() method
+        --> The .fadeOut() method gradually hides an element by decreasing its opacity from 1 to 0, then sets display: none.
+
+        Syntacx :- 
+            $(selector).fadeOut();
+
+
+    Key Features
+
+        Works using opacity
+
+        Creates smooth visual transitions
+
+        Accepts:
+
+            "slow", "fast", or milliseconds
+
+            Callback functions
+
+            Improves UI experience
