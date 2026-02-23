@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Practical Assignment</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        body{
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        .box{
+            width:200px;
+            height:100px;
+            background:skyblue;
+            margin:10px 0;
+            padding:10px;
+        }
+
+        #slideContent{
+            background:lightgreen;
+            padding:10px;
+            display:none;
+        }
+
+        #moreText{
+            display:none;
+        }
+
+        #animateBox{
+            width:100px;
+            height:100px;
+            background:orange;
+            position:relative;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>1. FadeIn & FadeOut</h2>
+    <button id="fadeInBtn">Fade In</button>
+    <button id="fadeOutBtn">Fade Out</button>
+    <div id="fadeBox" class="box" style="display:none;">
+        Fade Effect Box
+    </div>
+
+    <hr>
+
+    <h2>2. SlideToggle Content</h2>
+    <button id="slideBtn">Toggle Content</button>
+    <div id="slideContent">
+        This content slides up and down using slideToggle().
+    </div>
+
+    <hr>
+
+    <h2>3. Read More / Read Less</h2>
+    <p>
+        This is short text...
+        <span id="moreText">
+            This is additional hidden content that appears when you click Read More button.
+        </span>
+    </p>
+    <button id="readBtn">Read More</button>
+
+    <hr>
+
+    <h2>4. Chained Animations</h2>
+    <button id="animateBtn">Start Animation</button>
+    <div id="animateBox"></div>
+
+    <script>
+        $(document).ready(function(){
+
+            // 1. FadeIn & FadeOut
+            $("#fadeInBtn").click(function(){
+                $("#fadeBox").fadeIn(1000);
+            });
+
+            $("#fadeOutBtn").click(function(){
+                $("#fadeBox").fadeOut(1000);
+            });
+
+            // 2. SlideToggle
+            $("#slideBtn").click(function(){
+                $("#slideContent").slideToggle(1000);
+            });
+
+            // 3. Read More / Read Less
+            $("#readBtn").click(function(){
+                $("#moreText").slideToggle();
+                if($(this).text() == "Read More"){
+                    $(this).text("Read Less");
+                } else {
+                    $(this).text("Read More");
+                }
+            });
+
+            // 4. Chained Animations
+            $("#animateBtn").click(function(){
+                $("#animateBox")
+                    .animate({left: '200px'}, 1000)
+                    .animate({top: '100px'}, 1000)
+                    .animate({left: '0px'}, 1000)
+                    .animate({top: '0px'}, 1000);
+            });
+
+        });
+    </script>
+
+</body>
+</html>

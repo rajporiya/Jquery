@@ -1,0 +1,9 @@
+4. Explain click, keyup, and change events.-
+    --> 
+    1).The click event occurs when a user presses and releases a mouse button on an element like a button, link, or image.
+
+    2. Keyup Event
+        --> The keyup event occurs when a user releases a key on the keyboard after pressing it.
+        
+    3. 3. Change Event
+        --> The change event occurs when the value of an input element is changed and then confirmed (usually when the user leaves the field or selects an option).

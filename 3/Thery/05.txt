@@ -1,0 +1,12 @@
+What is event handling in jQuery?
+
+    --> Event handling in jQuery means writing code that tells the program what action to perform when a user interacts with a web page, such as clicking a button, pressing a key, or changing input.
+
+    Example:- 
+        If a user clicks a button, jQuery can run some code.
+
+            $("#btn").click(function() {
+                alert("Button clicked!");
+            });
+
+    --> Event handling in jQuery is the process of detecting user actions like click, key press, or change in input and executing a function in response to those actions.

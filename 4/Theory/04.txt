@@ -1,0 +1,14 @@
+4. How does jQuery AJAX work?
+    --> jQuery AJAX works by sending an asynchronous HTTP request to the server and receiving data without reloading the entire webpage. It communicates with the server in the background and updates only the required part of the page.
+
+        🔹 Step-by-Step Working
+            1. User Action Occurs
+                --> A user clicks a button, submits a form, or triggers an event.
+            2. AJAX Request is Sent
+                --> jQuery sends a request to the server using $.ajax(), $.get(), or $.post().
+            3. Server Processes the Request
+                --> The server receives the request, processes it (e.g., database query), and prepares a response.
+            4. Server Sends Response Back
+                --> The response may be in JSON, XML, HTML, or text format. 
+            5. Webpage Updates Dynamically
+                --> jQuery receives the response and updates a specific part of the webpage without refreshing the page..

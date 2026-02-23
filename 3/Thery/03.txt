@@ -1,0 +1,17 @@
+What is the use of .html() and .text()?
+
+    --> The .html() and .text() methods in jQuery are used to get or set the content of HTML elements dynamically.
+
+    1. .html() method
+        --> The .html() method is used to get or set HTML content, including tags.
+
+        Use cases
+            --> Insert HTML elements dynamically
+            --> Apply formatting like bold, italic, links
+            --> Replace inner HTML of an element
+
+    2. .text() method
+        --> The .text() method is used to get or set only plain text (HTML tags are treated as text).
+
+            Use cases
+                

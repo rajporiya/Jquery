@@ -1,0 +1,37 @@
+5. Compare jQuery AJAX with modern fetch() API.
+    --> Both jQuery AJAX and the modern fetch() API are used to make asynchronous HTTP requests to a server, but they differ in syntax, flexibility, and usage.
+
+    1. Introduction
+        --> jQuery AJAX → Part of the jQuery library ($.ajax())
+        --> fetch() API → Built-in modern JavaScript feature (no library required)
+
+    2. Syntax Comparison
+        --> jQuery AJAX
+            $.ajax({
+                url: "data.json",
+                method: "GET",
+                success: function(response) {
+                    console.log(response);
+                }
+            });
+     3. Key Differences
+            Feature                	jQuery AJAX	              fetch() API
+            Library Required        Yes (jQuery)               	No
+            Introduced	            Older method            	Modern JavaScript
+            Syntax Style	        Callback-based	                Promise-based
+            Error Handling	        Built-in success/error	        Uses .then() & .catch()
+            JSON Handling	        Automatic	                    Must convert using response.json()
+            Browser Support	        Works in older browsers         	Modern browsers
+
+    4. Advantages Comparison
+
+        jQuery AJAX 
+            Simple for beginners
+            Works well with older browsers
+            Easy shorthand methods like $.get() and $.post()
+
+        fetch() API
+            No external library required
+            Cleaner and modern syntax
+            Works well with async/await
+            Better for modern web applications

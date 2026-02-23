@@ -1,0 +1,19 @@
+Explain how CSS can be modified using jQuery.
+
+    -->     jQuery allows you to change, add, or remove CSS styles dynamically—without reloading the page. This is super useful for animations, themes, validation, and interactive UI effects.
+
+    1. Using .css() method
+        --> The .css() method is the most direct way to modify CSS.
+
+    
+    2. Using .addClass() method
+        --> Adds a CSS class to an element.
+    
+    3. Using .removeClass() method
+        --> Removes a CSS class.   
+
+    4. Using .toggleClass() method
+        --> Adds or removes a class automatically. 
+
+    5. Change CSS on events
+

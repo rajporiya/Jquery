@@ -1,0 +1,15 @@
+How can text be changed dynamically using jQuery?
+
+    --> Text can be changed dynamically in jQuery using the .text() and .html() methods. These methods allow you to update the content of HTML elements at runtime, based on user actions or events.
+    
+    1. Using .text() method
+        --> The .text() method changes only the text content (no HTML tags).
+
+    2. Using .html() method
+        --> The .html() method changes text along with HTML tags.
+
+    3. Change text on button click
+
+    4. Get and set text dynamically
+
+    5. Using .val() (for input fields)

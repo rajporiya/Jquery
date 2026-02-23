@@ -1,0 +1,16 @@
+2. Explain the purpose and advantages of AJAX.
+    --> Purpose of AJAX
+        --> The main purpose of AJAX (Asynchronous JavaScript and XML) is to:
+        --> Communicate with the server without reloading the entire webpage
+        --> Update only specific parts of a webpage
+        --> Make web applications faster and more interactive
+        --. Improve overall user experience
+        --> In simple words, AJAX allows data to be sent and received in the background while the user continues using the page.
+
+        Advantages of AJAX
+            
+            1. No Full Page Reload
+            2. Faster Performance
+            3. Better User Experience
+            4. Asynchronous Communication
+            5. Reduced Server Traffic

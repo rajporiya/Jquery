@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Practical Assignment</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        #colorBox {
+            width: 200px;
+            height: 100px;
+            background-color: lightgray;
+            margin-top: 10px;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        textarea {
+            width: 300px;
+            height: 100px;
+            margin-top: 10px;
+        }
+
+        .counter {
+            margin-top: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>1. Change Paragraph Text Dynamically</h2>
+    <p id="para">This is original text.</p>
+    <button id="changeText">Change Text</button>
+
+    <hr>
+
+    <h2>2. Change Background Color on Button Click</h2>
+    <button id="changeColor">Change Background</button>
+    <div id="colorBox">Color Box</div>
+
+    <hr>
+
+    <h2>3 & 4. Live Word and Character Counter</h2>
+    <textarea id="textArea" placeholder="Type something..."></textarea>
+    <div class="counter">Word Count: <span id="wordCount">0</span></div>
+    <div class="counter">Character Count: <span id="charCount">0</span></div>
+
+    <script>
+        $(document).ready(function(){
+
+            // 1. Change paragraph text dynamically
+            $("#changeText").click(function(){
+                $("#para").text("Paragraph text has been changed using jQuery!");
+            });
+
+            // 2. Change background color on button click
+            $("#changeColor").click(function(){
+                $("#colorBox").css("background-color", "lightblue");
+            });
+
+            // 3 & 4. Live word and character counter
+            $("#textArea").keyup(function(){
+                var text = $(this).val();
+
+                // Character count
+                $("#charCount").text(text.length);
+
+                // Word count
+                var words = text.trim().split(/\s+/);
+                if(text.trim() === ""){
+                    $("#wordCount").text(0);
+                } else {
+                    $("#wordCount").text(words.length);
+                }
+            });
+
+        });
+    </script>
+
+</body>
+</html>

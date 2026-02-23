@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Practical Assignments</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            // 1. Hide paragraph using jQuery
+            $("#hideParaBtn").click(function(){
+                $("#myParagraph").hide();
+            });
+
+            // 2. Show hidden element using button
+            $("#showElementBtn").click(function(){
+                $("#hiddenDiv").show();
+            });
+
+            // 3. Hide and Show buttons
+            $("#hideBtn").click(function(){
+                $(".box").hide();
+            });
+
+            $("#showBtn").click(function(){
+                $(".box").show();
+            });
+
+            // 4. ID and Class selector demo
+            $("#idSelectorBtn").click(function(){
+                $("#idDemo").css("color","red");
+            });
+
+            $("#classSelectorBtn").click(function(){
+                $(".classDemo").css("background","yellow");
+            });
+
+        });
+    </script>
+
+    <style>
+        .box{
+            width:200px;
+            height:100px;
+            background:lightblue;
+            margin:10px 0;
+            padding:10px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h2>1. Hide Paragraph</h2>
+    <p id="myParagraph">This is a paragraph. Click button to hide it.</p>
+    <button id="hideParaBtn">Hide Paragraph</button>
+
+    <hr>
+
+    <h2>2. Show Hidden Element</h2>
+    <div id="hiddenDiv" style="display:none;">
+        This is hidden content.
+    </div>
+    <button id="showElementBtn">Show Hidden Element</button>
+
+    <hr>
+
+    <h2>3. Hide and Show Buttons</h2>
+    <div class="box">Box Content</div>
+    <button id="hideBtn">Hide</button>
+    <button id="showBtn">Show</button>
+
+    <hr>
+
+    <h2>4. ID and Class Selector Demo</h2>
+    <p id="idDemo">This text uses ID selector.</p>
+    <p class="classDemo">This text uses Class selector.</p>
+
+    <button id="idSelectorBtn">Apply ID Selector</button>
+    <button id="classSelectorBtn">Apply Class Selector</button>
+
+</body>
+</html>

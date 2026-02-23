@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX Practical - All in One</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body { font-family: Arial; margin: 20px; }
+        button { margin: 5px 0; padding: 5px 10px; }
+        div { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+<h1>AJAX Practical Assignment</h1>
+
+<!-- 1. Load Content Dynamically -->
+<h2>1. Load Content Dynamically (jQuery AJAX)</h2>
+<button id="loadContent">Load Content</button>
+<div id="dynamicContent"></div>
+
+<hr>
+
+<!-- 2. Fetch JSON Data from Mock API -->
+<h2>2. Fetch JSON Data (jQuery AJAX)</h2>
+<button id="fetchUsers">Fetch Users</button>
+<ul id="userList"></ul>
+
+<hr>
+
+<!-- 3. Display User Data Without Reloading Page -->
+<h2>3. Submit Form without Page Reload</h2>
+<form id="userForm">
+    Name: <input type="text" id="name" required>
+    Email: <input type="email" id="email" required>
+    <button type="submit">Submit</button>
+</form>
+<div id="formResult"></div>
+
+<hr>
+
+<!-- 4. Convert jQuery AJAX to fetch() -->
+<h2>4. Fetch Users using Modern fetch()</h2>
+<button onclick="fetchUsingFetch()">Fetch Users (fetch)</button>
+<ul id="fetchUserList"></ul>
+
+
+<script>
+
+    // 1. Load Content Dynamically
+    $("#loadContent").click(function () {
+        $("#dynamicContent").html(
+            "<p>This content is loaded dynamically using jQuery AJAX.</p>"
+        );
+    });
+
+
+    // 2. Fetch JSON Data using jQuery AJAX
+    $("#fetchUsers").click(function () {
+        $.ajax({
+            url: "https://jsonplaceholder.typicode.com/users",
+            type: "GET",
+            success: function (data) {
+                $("#userList").empty();
+                $.each(data, function (index, user) {
+                    $("#userList").append(
+                        "<li>" + user.name + " - " + user.email + "</li>"
+                    );
+                });
+            }
+        });
+    });
+
+
+    // 3. Submit Form without Page Reload
+    $("#userForm").submit(function (e) {
+        e.preventDefault();
+
+        var name = $("#name").val();
+        var email = $("#email").val();
+
+        $.ajax({
+            url: "https://jsonplaceholder.typicode.com/posts",
+            type: "POST",
+            data: {
+                name: name,
+                email: email
+            },
+            success: function () {
+                $("#formResult").html(
+                    "<p><b>Name:</b> " + name +
+                    "<br><b>Email:</b> " + email +
+                    "<br>Submitted Successfully without page reload!</p>"
+                );
+            }
+        });
+    });
+
+
+    // 4. Using Modern fetch()
+    function fetchUsingFetch() {
+        fetch("https://jsonplaceholder.typicode.com/users")
+            .then(response => response.json())
+            .then(data => {
+                const list = document.getElementById("fetchUserList");
+                list.innerHTML = "";
+
+                data.forEach(user => {
+                    list.innerHTML +=
+                        "<li>" + user.name + " - " + user.email + "</li>";
+                });
+            })
+            .catch(error => console.log("Error:", error));
+    }
+
+</script>
+
+</body>
+</html>
